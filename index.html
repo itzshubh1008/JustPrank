@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SHuBHam - Photo Editor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #f8e1f4 0%, #b5d5e0 100%);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .svg-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="svg-bg"></div>
+  <!-- Removed duplicate container -->
+  <div class="insta-footer">
+    <a href="https://instagram.com/itz_shubh1008" target="_blank" class="insta-link" title="Follow on Instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="insta-logo" width="36" height="36" style="border-radius:50%;box-shadow:0 2px 8px rgba(181,213,224,0.15);">
+      <span class="insta-user">itz_shubh1008</span>
+    </a>
+  </div>
+  <div class="container">
+    <h1 class="logo">TRIGGU</h1>
+    <div class="controls">
+      <label class="file-label">Choose a photo
+        <input id="fileInput" type="file" accept="image/*">
+      </label>
+      <label class="text-label">Replacement URL (optional):
+        <input id="replacementInput" type="text" placeholder="Paste image URL or leave blank">
+      </label>
+      <button id="editBtn">Edit</button>
+    </div>
+    <div class="preview">
+      <img id="previewImg" src="" alt="Preview will appear here">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
